@@ -333,7 +333,7 @@ export default {
             height: '100%',
             width: '100%',
             videoId: '',
-            playerVars: { autoplay: 1, controls: 1, html5: 1, 'origin' : 'https://www.youtube.com' },
+            playerVars: { autoplay: 1, controls: 1, html5: 1, 'origin' : 'http://www.youtube.com' },
             events: {
               onReady (event) {
                 curThis.startPlayer()
