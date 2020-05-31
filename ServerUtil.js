@@ -36,6 +36,8 @@ module.exports = {
       if (!$) return
 
       const postElements = $('table tr td div[class^="wrap_song_info"]')
+      console.log( "postElements check!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!" )
+      console.log( postElements )
       let index = 0
       if (postElements.length > 0) {
         for (let key = 0; key < postElements.length; key++) {
