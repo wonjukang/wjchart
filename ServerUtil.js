@@ -23,7 +23,7 @@ module.exports = {
         break
 
       case 'pop':
-        url = 'http://www.melon.com/genre/song_list.htm?gnrCode=GN0900'
+        url = 'https://www.melon.com/genre/song_list.htm?gnrCode=GN0900'
         break
 
       default:
@@ -102,7 +102,7 @@ module.exports = {
 
   // param - searchInput
   async getSearchSongList (param = {}) {
-    const searchUrl = 'http://www.youtube.com/results?search_query=' + urlencode(param.searchInput)
+    const searchUrl = 'https://www.youtube.com/results?search_query=' + urlencode(param.searchInput)
     const resultList = []
     try {
       const $ = await this.urlRequest(searchUrl)
