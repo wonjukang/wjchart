@@ -23,7 +23,7 @@ module.exports = {
         break
 
       case 'pop':
-        url = 'https://www.melon.com/genre/song_list.htm?gnrCode=GN0900'
+        url = 'http://www.melon.com/genre/song_list.htm?gnrCode=GN0900'
         break
 
       default:
