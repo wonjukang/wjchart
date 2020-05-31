@@ -67,7 +67,7 @@ module.exports = {
     if (!param.song || !param.singer) return
     const reg = new RegExp('\\(.*?\\)', 'g')
     const encodedSrchparam = urlencode(param.song.replace(reg, '') + ' ' + param.singer.replace(reg, ''))
-    const url = 'https://www.youtube.com/results?search_query=' + encodedSrchparam
+    const url = 'http://www.youtube.com/results?search_query=' + encodedSrchparam
     console.log('getVideoIdBySongAndSinger', JSON.stringify(param), encodedSrchparam, url)
     try {
       const $ = await this.urlRequest(url)
@@ -100,7 +100,7 @@ module.exports = {
 
   // param - searchInput
   async getSearchSongList (param = {}) {
-    const searchUrl = 'https://www.youtube.com/results?search_query=' + urlencode(param.searchInput)
+    const searchUrl = 'http://www.youtube.com/results?search_query=' + urlencode(param.searchInput)
     const resultList = []
     try {
       const $ = await this.urlRequest(searchUrl)
