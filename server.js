@@ -3,6 +3,9 @@ const ServerUtil = require('./ServerUtil')
 // DB
 const mongoose = require('mongoose')
 mongoose.set('useNewUrlParser', true)
+mongoose.set('useFindAndModify', false)
+mongoose.set('userCreateIndex', true)
+mongoose.set('useUnifiedTopology', true)
 mongoose.Promise = require('bluebird')
 const db = mongoose.connection
 db.on('error', console.error)

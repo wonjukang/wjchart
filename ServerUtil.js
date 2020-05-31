@@ -142,7 +142,7 @@ module.exports = {
             console.log('Unexpected Error :::')
             console.log( error )
             console.log( 'response ::::::::::::: ')
-            console.log( response )
+            //console.log( response )
             resolve()
           } else {
             const $ = cheerio.load(body)
