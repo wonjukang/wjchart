@@ -35,9 +35,13 @@ if (process.env.NODE_ENV !== 'production') {
   app.use(require('webpack-hot-middleware')(compiler))
 }
 
-app.listen(3000, function () {
-  console.log('App listening on port 3000!\n')
+app.listen(80, function () {
+  console.log('App listening on port 80!\n')
 })
+
+// app.listen(3000, function () {
+//   console.log('App listening on port 3000!\n')
+// })
 
 app.get('/', (req, res) => {
   res.render('index')
