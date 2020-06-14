@@ -146,6 +146,15 @@ module.exports = {
         date: obj.date
       }
     }))
-  }
+  },
+
+  deleteMessage (param = []) {    
+    return Message.deleteOne((obj) => {
+      return {        
+        writer: param.writer,
+        contents: param.contents        
+      }
+    })
+  },
 
 }

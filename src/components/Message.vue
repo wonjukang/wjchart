@@ -51,7 +51,7 @@
               </button>
             </td>
           </tr>
-          <tr v-if="(userInfo||{}).userId=='admin'">
+          <tr v-if="(userInfo||{}).userId=='wjadmin'">
             <td colspan="3">
               <button
                 type="button"
@@ -67,6 +67,13 @@
                 @click="insertMany()"
               >
                 Insertmany
+              </button>
+              <button
+                type="button"
+                class="btn btn-sm btn-danger"
+                @click="deleteOne()"
+              >
+                Delete
               </button>
             </td>
           </tr>
@@ -197,6 +204,20 @@ export default {
         return
       }
       this.initMessage()
+    },
+
+    async deleteOne () {
+      const res = await this.ajax({
+        url: '/song/message/delete',
+        params: {
+          json: this.backup
+        }
+      })
+      if (res.data.result !== 'SUCCESS') {
+        alert('메세지 작성 에러')
+        return
+      }
+     this.initMessage()
     }
 
   }

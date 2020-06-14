@@ -160,3 +160,10 @@ app.get('/song/message/insertMany', async (req, res) => {
   await DBUtil.insertManyMessage(JSON.parse(param.json))
   res.send({ result: 'SUCCESS' })
 })
+
+app.get('/song/message/delete', async (req, res) => {
+   const param = req.query || {}   
+   await DBUtil.deleteMessage(JSON.parse(param.json))      
+   res.send({ result: 'SUCCESS' })
+})
+
